@@ -1,13 +1,14 @@
-﻿#ifndef __II2C
-#define __II2C
+﻿#include "nw21_types.h"
 
-#include "nw21_types.h"
+#ifndef __II2C
+#define __II2C
 
 class II2C
 {
 public:
     enum II2C_ERROR
     {
+        II2C_ERROR_NONE,
         II2C_ERROR_NORESPONSE,
         II2C_ERROR_NOTENOUGHDATA,
     };
