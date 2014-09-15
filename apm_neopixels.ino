@@ -1,6 +1,11 @@
 #include "LightingControl.h"
+#include "LightingIrisImpl.h"
+#include "SystemArduinoImpl.h"
 
-LightingControl lightControl;
+LightingIrisImpl lights;
+SystemArduinoImpl system;
+LightingControl lightControl( &lights,    
+                              &system );
 
 void setup()
 {

@@ -1,14 +1,19 @@
-// IrisLightingControl.h
-#include "LightingIrisImpl.h" 
+#include "ILighting.h"
+#include "ISystem.h"
+
 #ifndef _IRISLIGHTINGCONTROL_h
 #define _IRISLIGHTINGCONTROL_h
 
 class LightingControl
 {
 public:
-     void init();
-public:
-    LightingIrisImpl lights;
+    LightingControl( ILighting* lighting,
+                     ISystem* system );
+    void init();
+
+private:
+    ILighting* m_pLights;
+    ISystem* m_pSystem;
 };
 
 #endif

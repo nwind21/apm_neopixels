@@ -73,8 +73,6 @@ public:
 
     // All LEDS on then off in a rapid flash
     virtual void strobe( uint8_t times ) = 0;
-
-    virtual uint32_t rgb( uint8_t r, uint8_t g, uint8_t b ) = 0;
 };
 
 #endif
