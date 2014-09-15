@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeoPixels_TEST", "NeoPixels_TEST.vcxproj", "{9FBE6694-8FCF-46DE-A48C-86A2461B6EFB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "apm_neopixels_TEST", "apm_neopixels_TEST.vcxproj", "{9FBE6694-8FCF-46DE-A48C-86A2461B6EFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -13,7 +13,13 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\mock">
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{6b3ed114-55e5-4dbb-ae3f-1a0ff822a691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{84950107-4060-4c52-a5cd-b42dffebe017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\mock">
       <UniqueIdentifier>{5aff614a-d2eb-432e-a8f9-41e16f37870f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -25,24 +31,39 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mock\II2CMock.h">
-      <Filter>Source Files\mock</Filter>
+      <Filter>Source Files\test\mock</Filter>
     </ClInclude>
     <ClInclude Include="mock\ILightingMock.h">
-      <Filter>Source Files\mock</Filter>
+      <Filter>Source Files\test\mock</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\II2C.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="mock\ISystemMock.h">
+      <Filter>Source Files\test\mock</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ILighting.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="..\II2C.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ILighting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ISystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LightingControl.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NeoPixels_TEST.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LightingControl_init.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
     <ClCompile Include="ILighting_RGB.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LightingControl.cpp">
+      <Filter>Source Files\src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
