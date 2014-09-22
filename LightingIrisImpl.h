@@ -20,7 +20,7 @@ public:
     virtual ~LightingIrisImpl() {}
     virtual void off( );
 
-    virtual void initialize();
+    virtual void initialize( );
     virtual uint8_t length( ILighting::ARM arm );
     virtual uint8_t cnt( );
     virtual void setColor( ILighting::ARM arm,
@@ -34,6 +34,9 @@ public:
     virtual void setColorAndDisplay( ILighting::ARM arm,
                                      uint32_t color );
 
+    virtual void strobeOn();
+    virtual void strobeOff();
+
     virtual void on( );
     virtual void on( ILighting::ARM arm );
     virtual void on( ILighting::ARM arm,
@@ -41,16 +44,6 @@ public:
     virtual void off( ILighting::ARM arm );
     virtual void off( ILighting::ARM arm,
                       uint8_t index );
-    virtual void strobe( uint8_t times );
-    virtual uint32_t rgb( uint8_t r, uint8_t g, uint8_t b )
-    {
-        uint32_t color = r;
-        color <<= 8;
-        color |= g;
-        color <<= 8;
-        color |= b;
-        return color ;
-    }
 
 private:
     void showAll();

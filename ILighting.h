@@ -28,7 +28,8 @@ public:
 
     virtual ~ILighting() {};
 
-    virtual void initialize() = 0;
+    // Attach to system event timer.
+    virtual void initialize( ) = 0;
 
     // Return the number of arms
     virtual uint8_t cnt( ) = 0;
@@ -41,6 +42,9 @@ public:
     //
     // If the LED index doeen't exist, ignore the command.
     // If RGB is not supported, ignore the command.
+    //
+    // All these functions will save the current color so the
+    // the on/off will toggle the color.
     virtual void setColor( ILighting::ARM arm,
                            uint8_t index,
                            uint32_t color ) = 0;
@@ -52,12 +56,16 @@ public:
     virtual void setColorAndDisplay( ILighting::ARM arm,
                                      uint32_t color ) = 0;
 
+    // Temporary set the color to strobe and enable the lights
+    virtual void strobeOn( ) = 0;
+
+    // Turn off the strobes
+    virtual void strobeOff() = 0;
+
     // Turn on the arm, if setColor was not called the color may be
     // undefined.
     virtual void on( ) = 0;
-
     virtual void on( ILighting::ARM arm ) = 0;
-
     virtual void on( ILighting::ARM arm,
                      uint8_t index ) = 0;
 
@@ -71,8 +79,6 @@ public:
     virtual void off( ILighting::ARM arm,
                       uint8_t index ) = 0;
 
-    // All LEDS on then off in a rapid flash
-    virtual void strobe( uint8_t times ) = 0;
 };
 
 #endif

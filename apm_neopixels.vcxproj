@@ -90,11 +90,17 @@
     <ClInclude Include="ILighting.h">
       <FileType>CppCode</FileType>
     </ClInclude>
+    <ClInclude Include="ISystem.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
     <ClInclude Include="LightingControl.h" />
     <ClInclude Include="LightingIrisImpl.h">
       <FileType>CppCode</FileType>
     </ClInclude>
     <ClInclude Include="nw21_types.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SystemArduinoImpl.h">
       <FileType>CppCode</FileType>
     </ClInclude>
     <ClInclude Include="Visual Micro\.apm_neopixels.vsarduino.h" />

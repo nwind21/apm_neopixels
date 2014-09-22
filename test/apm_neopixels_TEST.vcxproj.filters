@@ -51,19 +51,43 @@
     <ClInclude Include="..\LightingControl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Timer.h">
+      <Filter>Source Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Event.h">
+      <Filter>Source Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ITimer.h">
+      <Filter>Source Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="mock\ITimerMock.h">
+      <Filter>Source Files\test\mock</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LightingControl_init.cpp">
-      <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="ILighting_RGB.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
     <ClCompile Include="..\LightingControl.cpp">
       <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Timer.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Event.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingControl_initialize.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingControl_queueLightSequence.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingControl_shutdown.cpp">
+      <Filter>Source Files\test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -88,18 +88,26 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Event.h" />
     <ClInclude Include="..\II2C.h" />
     <ClInclude Include="..\ILighting.h" />
     <ClInclude Include="..\ISystem.h" />
+    <ClInclude Include="..\ITimer.h" />
     <ClInclude Include="..\LightingControl.h" />
+    <ClInclude Include="..\Timer.h" />
     <ClInclude Include="mock\II2CMock.h" />
     <ClInclude Include="mock\ILightingMock.h" />
     <ClInclude Include="mock\ISystemMock.h" />
+    <ClInclude Include="mock\ITimerMock.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Event.cpp" />
     <ClCompile Include="..\LightingControl.cpp" />
-    <ClCompile Include="LightingControl_init.cpp" />
+    <ClCompile Include="..\Timer.cpp" />
+    <ClCompile Include="LightingControl_initialize.cpp" />
+    <ClCompile Include="LightingControl_queueLightSequence.cpp" />
+    <ClCompile Include="LightingControl_shutdown.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ILighting_RGB.cpp" />
   </ItemGroup>

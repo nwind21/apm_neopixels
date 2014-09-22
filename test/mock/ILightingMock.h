@@ -27,6 +27,7 @@ public:
                                              uint32_t color ) );
     MOCK_METHOD2( setColorAndDisplay, void( ILighting::ARM arm,
                                             uint32_t color ) );
-    MOCK_METHOD1( strobe, void( uint8_t times ) );
+    MOCK_METHOD0( strobeOn, void( ) );
+    MOCK_METHOD0( strobeOff, void() );
 
 };

@@ -32,7 +32,7 @@ LightingIrisImpl::LightingIrisImpl()
 
 }
 
-void LightingIrisImpl::initialize()
+void LightingIrisImpl::initialize( )
 {
     for ( int iLights = 0; iLights < sizeof( m_sLight ) / sizeof( Adafruit_NeoPixel ); iLights++ )
     {
@@ -43,7 +43,6 @@ void LightingIrisImpl::initialize()
 
     // small sleep to get things setttled down
     brightness( 150 );
-    delay( 500 );
 }
 
 void LightingIrisImpl::on( )
@@ -165,44 +164,26 @@ void LightingIrisImpl::setColorAndDisplay( ILighting::ARM arm,
     m_sLight[arm].show();
 }
 
-void LightingIrisImpl::strobe( uint8_t times )
+void LightingIrisImpl::strobeOn( )
 {
-    int iLights;
-
-    // Turn off the ARMS
-    for ( iLights = 0; iLights < sizeof( m_sLight ) / sizeof( Adafruit_NeoPixel ); iLights++ )
+    for ( int  iLights = 0; iLights < sizeof( m_sLight ) / sizeof( Adafruit_NeoPixel ); iLights++ )
     {
-        off( static_cast<ILighting::ARM>(iLights) );
         m_sLight[iLights].setBrightness( 255 );
+        m_sLight[iLights].setStripColor( 255,
+                                         255,
+                                         255 );
     }
     showAll();
+}
 
-    // Strobe white at the highest brightness
-    for ( uint8_t iTimes = 0; iTimes < times; iTimes++ )
-    {
-        for ( iLights = 0; iLights < sizeof( m_sLight ) / sizeof( Adafruit_NeoPixel ); iLights++ )
-        {
-            m_sLight[iLights].setStripColor( 255,
-                                             255,
-                                             255 );
-        }
-        showAll();
-        delay( 50 );
-
-        for ( iLights = 0; iLights < sizeof( m_sLight ) / sizeof( Adafruit_NeoPixel ); iLights++ )
-        {
-            m_sLight[iLights].setStripColor( 0,
-                                             0,
-                                             0 );
-        }
-        showAll();
-        delay( 1000 );
-    }
-
-    // Return back to default brightness
+void LightingIrisImpl::strobeOff()
+{
     brightness( 100 );
-    for ( iLights = 0; iLights < sizeof( m_sLight ) / sizeof( Adafruit_NeoPixel ); iLights++ )
+    for ( int iLights = 0; iLights < sizeof( m_sLight ) / sizeof( Adafruit_NeoPixel ); iLights++ )
     {
-        on( static_cast<ILighting::ARM>(iLights) );
+        m_sLight[iLights].setStripColor( 0,
+                                         0,
+                                         0 );
     }
+    showAll();
 }
